@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('cds');
-});
+// Route::get('/', function () {
+//     return view('cds');
+// });
+
+Route::get('/', 'CdController@index')->name('cd.index');
+
+Route::get('/show/{slug}', 'CdController@show')->name('cd.show');
